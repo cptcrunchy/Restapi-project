@@ -12,6 +12,11 @@ app.get('/birthdaycard/:username', (req,res) => {
      res.send(`Happy Birthday ${name}! ${confetti} ${confetti}`)
     })
 
+app.get('/profile', (req,res) => {
+    let color = req.query.color;
+    let activity = req.query.activity;
+    res.send(`Your favorite color is ${color} and your favorite activity is ${activity}`)
+});
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
